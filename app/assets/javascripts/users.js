@@ -13,10 +13,13 @@ var addEventListners = function(){
 
 var showSignup = function(){
   $('#signup').removeClass('invisible')
+  $('#login').addClass('invisible')
+
 }
 
 var showLogin = function(){
 
   $('#login').removeClass('invisible')
+  $('#signup').addClass('invisible')
 
 }
