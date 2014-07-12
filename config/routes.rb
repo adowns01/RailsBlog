@@ -1,8 +1,24 @@
 Blog::Application.routes.draw do
 
-  resources :posts, only: [:index]
+  resources :posts
 
 
+  post '/signup', to: 'users#signup'
+  post '/login', to: 'users#login'
+  post '/logout', to: 'users#logout'
+
+
+  # , only: [:index, :create]
+  # get '/posts/new', :to 'posts#new_post'
+  # post '/posts', to: 'posts#create_post'
+  # post '/posts', to: 'posts#create'
+
+
+
+
+
+
+  # get '/posts/:id', to: 'posts#show'
 
 
 

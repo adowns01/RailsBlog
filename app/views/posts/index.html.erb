@@ -1,2 +1,34 @@
-INDEX
-YAY!
+<ol>
+<% @posts.each do |post|%>
+<li><%= post.title %></li>
+<% end %>
+</ol>
+
+<button type="button" id = 'signup-button'>Signup</button>
+<button type="button" id = 'login-button'>Login</button>
+
+<form name="login" action="/logout" method="post">
+  <input type="submit" value="Logout">
+</form>
+
+<div id = 'signup' class = "invisible">
+  <form name="signup" action="/signup" method="post">
+
+    <input type="text" name="username" placeholder = "username">
+    <input type="password" name="password" placeholder = "password">
+
+    <input type="submit" value="Create">
+  </form>
+</div>
+
+<div id = 'login' class = "invisible">
+  <form name="login" action="/login" method="post">
+
+    <input type="text" name="username" placeholder = "username">
+    <input type="password" name="password" placeholder = "password">
+
+    <input type="submit" value="Login">
+  </form>
+
+
+

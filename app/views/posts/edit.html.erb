@@ -1,0 +1,17 @@
+<form name="input" action="/posts/<%=@post.id%>" method="post">
+
+  <input type="text" name="title" value  = '<%= @post.title %>'>
+  <input type="text" name="author" value  = '<%= @post.author %>'>
+
+  <textarea name = "body"><%= @post.body %></textarea>
+
+
+  <input type="hidden" name="_method" value="PUT" >
+  <input type="submit" value="Edit">
+</form>
+
+<form name="delete-post" action="/posts/<%=@post.id%>" method="post">
+
+  <input type="hidden" name="_method" value="DELETE" >
+  <input type="submit" value="Delete Post">
+</form>

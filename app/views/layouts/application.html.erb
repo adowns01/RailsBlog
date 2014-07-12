@@ -6,9 +6,20 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+<% if @user %>
+<h1>hi <%=@user.username %></h1>
+<%end%>
+
 <body>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
+
+
+
+
+
+</div>
 </html>
