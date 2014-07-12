@@ -1,3 +1,17 @@
 .invisible {
   display: none;
 }
+
+.navbar{
+  background-color: #FF615C;
+}
+
+button, input{
+  /*background-color: #FF615C;*/
+  /*border: solid #FF615C;*/
+  border:none;
+
+}
+nav li {
+  margin: 10px;
+}

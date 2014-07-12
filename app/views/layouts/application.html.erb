@@ -5,7 +5,34 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+
 </head>
+
+
+<nav class="navbar navbar-default ">
+  <div class = 'container-fluid nav-bar-right nav-container'>
+    <ul class = "nav navbar-nav">
+
+      <li><div class="form-group"><button type="button" id = 'signup-button' >Signup</button></li>
+      <li><button type="button" id = 'login-button' >Login</button></li>
+      <li><form name="login" action="/logout" method="post">
+        <input   type="submit" value="Logout">
+      </form></li>
+    </ul>
+    <ul class = "nav navbar-nav">
+      <li><%= render :partial => 'signup_form' %> </li>
+      <li> <%= render :partial => 'login_form' %></li>
+    </ul>
+  </div>
+</nav>
 
 <% if @user %>
 <h1>hi <%=@user.username %></h1>
@@ -13,8 +40,11 @@
 
 <body>
 
+
   <%= yield %>
 
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 
 
